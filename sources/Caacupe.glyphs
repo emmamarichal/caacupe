@@ -4,7 +4,7 @@
 classes = (
 {
 automatic = 1;
-code = "A Aacute Abreve Acircumflex Adieresis Agrave Amacron Aogonek Aring Atilde AE B C Ccedilla Cdotaccent D Eth E Eacute Ecircumflex Edieresis Edotaccent Egrave Emacron Eogonek Etilde Schwa F G Gbreve Gdotaccent Gmacron H Hbar I IJ Iacute Icircumflex Idieresis Idotaccent Igrave Imacron Itilde J Jacute K L Lslash M N Ntilde O Oacute Ocircumflex Odieresis Ograve Omacron Oslash Otilde OE P Thorn Q R Racute S Scaron Scedilla Scommaaccent Germandbls T Tcommaaccent U Uacute Ucircumflex Udieresis Ugrave Umacron Utilde V W Wacute Wcircumflex Wdieresis Wgrave X Y Yacute Ycircumflex Ydieresis Ygrave Ytilde Z Zcaron Zdotaccent Saltillo Lcommaaccent.loclMAH Ncommaaccent.loclMAH";
+code = "A Aacute Abreve Acircumflex Adieresis Agrave Amacron Aogonek Aring Atilde AE B C Cacute Ccaron Ccedilla Cdotaccent D Dcaron Dcroat Eth E Eacute Ecaron Ecircumflex Edieresis Edotaccent Egrave Emacron Eogonek Etilde Schwa F G Gbreve Gcommaaccent Gdotaccent Gmacron H Hbar I IJ Iacute Icircumflex Idieresis Idotaccent Igrave Imacron Iogonek Itilde J Jacute K Kcommaaccent L Lacute Lcaron Lcommaaccent Lslash M N Nacute Ncaron Ncommaaccent Ntilde O Oacute Ocircumflex Odieresis Ograve Ohungarumlaut Omacron Oslash Otilde OE P Thorn Q R Racute Rcaron S Sacute Scaron Scedilla Scommaaccent Germandbls T Tcaron Tcommaaccent U Uacute Ucircumflex Udieresis Ugrave Uhungarumlaut Umacron Uogonek Uring Utilde V W Wacute Wcircumflex Wdieresis Wgrave X Y Yacute Ycircumflex Ydieresis Ygrave Ytilde Z Zacute Zcaron Zdotaccent Saltillo Lcommaaccent.loclMAH Ncommaaccent.loclMAH";
 name = Uppercase;
 }
 );
@@ -40,6 +40,7 @@ languagesystem latn TAT;
 languagesystem latn TRK;
 languagesystem latn ROM;
 languagesystem latn MOL;
+languagesystem latn MAH;
 languagesystem latn NLD;
 ";
 name = Languagesystems;
@@ -64,7 +65,7 @@ tag = aalt;
 {
 automatic = 1;
 code = "lookup ccmp_DFLT_1 {
-	@CombiningTopAccents = [acutecomb brevecomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
+	@CombiningTopAccents = [acutecomb brevecomb circumflexcomb commaturnedabovecomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
 	lookupflag UseMarkFilteringSet @CombiningTopAccents;
 	sub i' @CombiningTopAccents by idotless;
 	sub j' @CombiningTopAccents by jdotless;
@@ -72,8 +73,8 @@ code = "lookup ccmp_DFLT_1 {
 
 lookup ccmp_Other_1 {
 	lookupflag 0;
-	@Markscomb = [dieresis grave acute hungarumlaut circumflex caron breve ring tilde macron cedilla ogonek];
-	@MarkscombCase = [dieresis.case grave.case acute.case hungarumlaut.case circumflex.case caron.case breve.case ring.case tilde.case macron.case cedilla.case ogonek.case];
+	@Markscomb = [ringcomb dieresis grave acute hungarumlaut circumflex breve tilde macron cedilla ogonek];
+	@MarkscombCase = [ringcomb.case dieresis.case grave.case acute.case hungarumlaut.case circumflex.case breve.case tilde.case macron.case cedilla.case ogonek.case];
 	sub @Markscomb @Markscomb' by @MarkscombCase;
 	sub @Uppercase @Markscomb' by @MarkscombCase;
 } ccmp_Other_1;
@@ -121,11 +122,20 @@ language MOL;
 lookup locl_latn_1;
 
 script latn;
-language NLD;
+language MAH;
 lookup locl_latn_2 {
+	sub Lcommaaccent by Lcommaaccent.loclMAH;
+	sub Ncommaaccent by Ncommaaccent.loclMAH;
+	sub lcommaaccent by lcommaaccent.loclMAH;
+	sub ncommaaccent by ncommaaccent.loclMAH;
+} locl_latn_2;
+
+script latn;
+language NLD;
+lookup locl_latn_3 {
 	sub iacute j' by jacute;
 	sub Iacute J' by Jacute;
-} locl_latn_2;
+} locl_latn_3;
 ";
 tag = locl;
 },
@@ -509,14 +519,13 @@ tag = ordn;
 },
 {
 automatic = 1;
-code = "sub dieresis by dieresis.case;
+code = "sub ringcomb by ringcomb.case;
+sub dieresis by dieresis.case;
 sub grave by grave.case;
 sub acute by acute.case;
 sub hungarumlaut by hungarumlaut.case;
 sub circumflex by circumflex.case;
-sub caron by caron.case;
 sub breve by breve.case;
-sub ring by ring.case;
 sub tilde by tilde.case;
 sub macron by macron.case;
 sub cedilla by cedilla.case;
@@ -4300,7 +4309,7 @@ unicode = 315;
 {
 color = 4;
 glyphname = Lslash;
-lastChange = "2026-04-14 15:25:22 +0000";
+lastChange = "2026-07-01 13:51:14 +0000";
 layers = (
 {
 layerId = m01;
@@ -4308,24 +4317,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(144,244,o),
-(245,280,o),
-(358,316,c),
-(359,330,o),
-(354,349,o),
-(347,367,cs),
-(337,394,o),
-(326,414,o),
-(319,423,c),
-(208,378,o),
-(118,348,o),
-(6,313,c),
-(5,303,o),
-(11,279,o),
-(19,257,cs),
-(26,236,o),
-(35,218,o),
-(45,206,c)
+(166,237,o),
+(254,298,o),
+(354,362,c),
+(351,375,o),
+(342,392,o),
+(330,408,cs),
+(314,432,o),
+(298,448,o),
+(289,455,c),
+(193,383,o),
+(114,331,o),
+(15,268,c),
+(16,258,o),
+(28,237,o),
+(42,217,cs),
+(54,199,o),
+(67,184,o),
+(80,175,c)
 );
 },
 {
@@ -12862,33 +12871,37 @@ unicode = 316;
 {
 color = 4;
 glyphname = lslash;
-lastChange = "2026-04-14 15:25:22 +0000";
+lastChange = "2026-07-01 13:51:40 +0000";
 layers = (
 {
 layerId = m01;
 shapes = (
 {
-closed = 1;
-nodes = (
-(353,317,l),
-(354,330,o),
-(349,350,o),
-(342,368,cs),
-(333,392,o),
-(321,415,o),
-(314,424,c),
-(1,313,l),
-(0,303,o),
-(6,279,o),
-(15,255,cs),
-(21,236,o),
-(30,218,o),
-(40,206,c)
-);
+pos = (68,0);
+ref = l;
 },
 {
-pos = (83,0);
-ref = l;
+closed = 1;
+nodes = (
+(141,237,o),
+(229,298,o),
+(329,362,c),
+(326,375,o),
+(317,392,o),
+(305,408,cs),
+(289,432,o),
+(273,448,o),
+(264,455,c),
+(168,383,o),
+(89,331,o),
+(-10,268,c),
+(-9,258,o),
+(3,237,o),
+(17,217,cs),
+(29,199,o),
+(42,184,o),
+(55,175,c)
+);
 }
 );
 userData = {
@@ -12907,7 +12920,7 @@ com.hugojourdan.ColorFlow = {
 "9" = 0;
 };
 };
-width = 354;
+width = 319;
 }
 );
 note = lslash;
@@ -26536,10 +26549,6 @@ lastChange = "2026-07-01 13:25:26 +0000";
 layers = (
 {
 anchors = (
-{
-name = _top;
-pos = (88,500);
-},
 {
 name = _top;
 pos = (88,500);
