@@ -1,5 +1,5 @@
 {
-.appVersion = "3525";
+.appVersion = "3516";
 .formatVersion = 3;
 classes = (
 {
@@ -20,10 +20,14 @@ disabled = 1;
 name = glyphOrder;
 value = (
 );
+},
+{
+name = "Use Typo Metrics";
+value = 1;
 }
 );
 date = "2026-04-14 15:31:22 +0000";
-familyName = Caacupe;
+familyName = "Caacupe One";
 featurePrefixes = (
 {
 automatic = 1;
@@ -27474,15 +27478,6 @@ value = "Copyright (c) 2014-2026  by Magui Alonso. All rights reserved.";
 );
 },
 {
-key = descriptions;
-values = (
-{
-language = ENG;
-value = "Copyright (c) 2014-2026 by Magui Alonso. All rights reserved.";
-}
-);
-},
-{
 key = designers;
 values = (
 {
@@ -27510,19 +27505,6 @@ values = (
 {
 language = ESP;
 value = "Magui Alonso";
-}
-);
-},
-{
-key = postscriptFontName;
-value = Caacupe;
-},
-{
-key = postscriptFullNames;
-values = (
-{
-language = ESP;
-value = Caacupe;
 }
 );
 },
