@@ -1,6 +1,11 @@
 {
 .appVersion = "3516";
 .formatVersion = 3;
+DisplayStrings = (
+"The following mark characters are missing from the font: 
+Mandatory orthography codepoints:* cs_Latn (Czech)
+The following mark characters are missing from the font: "
+);
 classes = (
 {
 automatic = 1;
@@ -9597,7 +9602,7 @@ ref = c;
 },
 {
 pos = (68,-7);
-ref = caron;
+ref = caroncomb;
 }
 );
 width = 303;
@@ -10327,7 +10332,7 @@ ref = e;
 },
 {
 pos = (67,-7);
-ref = caron;
+ref = caroncomb;
 }
 );
 width = 356;
@@ -13140,7 +13145,7 @@ ref = n;
 },
 {
 pos = (83,-7);
-ref = caron;
+ref = caroncomb;
 }
 );
 width = 398;
@@ -13451,7 +13456,7 @@ ref = o;
 },
 {
 pos = (15,-7);
-ref = hungarumlaut;
+ref = hungarumlautcomb;
 }
 );
 width = 376;
@@ -14140,7 +14145,7 @@ ref = r;
 },
 {
 pos = (20,-7);
-ref = caron;
+ref = caroncomb;
 }
 );
 width = 273;
@@ -14336,7 +14341,7 @@ ref = s;
 },
 {
 pos = (46,-7);
-ref = caron;
+ref = caroncomb;
 }
 );
 userData = {
@@ -14968,7 +14973,7 @@ ref = u;
 },
 {
 pos = (25,-7);
-ref = hungarumlaut;
+ref = hungarumlautcomb;
 }
 );
 width = 396;
@@ -15838,7 +15843,7 @@ ref = z;
 },
 {
 pos = (56,-7);
-ref = caron;
+ref = caroncomb;
 }
 );
 userData = {
@@ -26582,6 +26587,75 @@ width = 177;
 unicode = 769;
 },
 {
+color = 4;
+glyphname = hungarumlautcomb;
+lastChange = "2026-07-01 13:58:21 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (173,500);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(179,623,ls),
+(204,649,o),
+(201,677,o),
+(190,701,cs),
+(177,732,o),
+(143,754,o),
+(135,757,c),
+(46,604,l),
+(52,590,o),
+(84,553,o),
+(106,544,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(323,615,ls),
+(347,642,o),
+(344,669,o),
+(333,694,cs),
+(320,724,o),
+(285,747,o),
+(278,750,c),
+(188,596,l),
+(195,583,o),
+(227,546,o),
+(250,537,c)
+);
+}
+);
+userData = {
+com.hugojourdan.ColorFlow = {
+"0" = 0;
+"1" = 0;
+"10" = 0;
+"11" = 0;
+"2" = 0;
+"3" = 0;
+"4" = 0;
+"5" = 0;
+"6" = 0;
+"7" = 0;
+"8" = 0;
+"9" = 0;
+};
+};
+width = 372;
+}
+);
+note = hungarumlaut;
+unicode = 779;
+},
+{
 color = 6;
 glyphname = caroncomb.alt;
 lastChange = "2026-07-01 13:49:02 +0000";
@@ -26683,6 +26757,49 @@ width = 229;
 }
 );
 unicode = 770;
+},
+{
+color = 4;
+glyphname = caroncomb;
+lastChange = "2026-07-01 13:58:27 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (116,500);
+}
+);
+layerId = m01;
+shapes = (
+{
+alignment = -1;
+pos = (0,1246);
+ref = circumflex;
+scale = (1,-1);
+}
+);
+userData = {
+com.hugojourdan.ColorFlow = {
+"0" = 0;
+"1" = 0;
+"10" = 0;
+"11" = 0;
+"2" = 0;
+"3" = 0;
+"4" = 0;
+"5" = 0;
+"6" = 0;
+"7" = 0;
+"8" = 0;
+"9" = 0;
+};
+};
+width = 229;
+}
+);
+note = caron;
+unicode = 780;
 },
 {
 color = 4;
@@ -27377,7 +27494,7 @@ unicode = 180;
 {
 color = 4;
 glyphname = hungarumlaut;
-lastChange = "2026-07-01 13:21:29 +0000";
+lastChange = "2026-07-01 13:58:48 +0000";
 layers = (
 {
 anchors = (
@@ -27504,7 +27621,7 @@ unicode = 710;
 {
 color = 4;
 glyphname = caron;
-lastChange = "2026-04-14 15:25:22 +0000";
+lastChange = "2026-07-01 13:58:43 +0000";
 layers = (
 {
 anchors = (
