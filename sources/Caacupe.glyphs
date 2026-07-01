@@ -637,7 +637,7 @@ over = -10;
 pos = -100;
 }
 );
-name = Bold;
+name = Regular;
 stemValues = (
 106,
 114,
@@ -27401,34 +27401,7 @@ instances = (
 instanceInterpolations = {
 m01 = 1;
 };
-isBold = 1;
-name = Bold;
-properties = (
-{
-key = postscriptFontName;
-value = Caacupe;
-},
-{
-key = postscriptFullNames;
-values = (
-{
-language = ENG;
-value = Caacupe;
-}
-);
-},
-{
-key = styleNames;
-values = (
-{
-language = ENG;
-value = Bold;
-}
-);
-}
-);
-weightClass = 700;
-widthClass = 4;
+name = Regular;
 }
 );
 kerningLTR = {
@@ -27473,7 +27446,7 @@ key = copyrights;
 values = (
 {
 language = ENG;
-value = "Copyright (c) 2014-2026  by Magui Alonso. All rights reserved.";
+value = "Copyright 2014-2026 The Caacupe Project Authors (https://github.com/googlefonts/caacupe)";
 }
 );
 },
@@ -27498,6 +27471,19 @@ language = ESP;
 value = Caacupe;
 }
 );
+},
+{
+key = licenses;
+values = (
+{
+language = dflt;
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org";
+}
+);
+},
+{
+key = licenseURL;
+value = "https://openfontlicense.org/";
 },
 {
 key = manufacturers;
