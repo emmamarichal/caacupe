@@ -1,10 +1,6 @@
 {
 .appVersion = "3516";
 .formatVersion = 3;
-DisplayStrings = (
-"\036",
-"not/.notdef def"
-);
 classes = (
 {
 automatic = 1;
@@ -556,7 +552,7 @@ sub otilde by otilde.ss01;
 labels = (
 {
 language = dflt;
-value = "";
+value = "o alternate";
 }
 );
 tag = ss01;
@@ -27163,8 +27159,9 @@ unicode = 699;
 },
 {
 color = 4;
+export = 0;
 glyphname = uni001E;
-lastChange = "2026-07-01 12:53:37 +0000";
+lastChange = "2026-07-01 13:03:13 +0000";
 layers = (
 {
 layerId = m01;
@@ -27297,8 +27294,9 @@ unicode = 30;
 },
 {
 color = 4;
+export = 0;
 glyphname = uni001F;
-lastChange = "2026-07-01 12:32:24 +0000";
+lastChange = "2026-07-01 13:03:30 +0000";
 layers = (
 {
 layerId = m01;
