@@ -15218,9 +15218,31 @@ note = otilde;
 {
 color = 4;
 glyphname = f_j;
-lastChange = "2026-04-14 15:25:22 +0000";
+lastChange = "2026-07-01 12:39:34 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom_1;
+pos = (105,0);
+},
+{
+name = bottom_2;
+pos = (314,0);
+},
+{
+name = caret_1;
+pos = (209,0);
+},
+{
+name = top_1;
+pos = (105,750);
+},
+{
+name = top_2;
+pos = (314,750);
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -15313,9 +15335,15 @@ metricRight = j;
 {
 color = 4;
 glyphname = fi;
-lastChange = "2026-04-14 15:25:22 +0000";
+lastChange = "2026-07-01 12:39:34 +0000";
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (212,0);
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -15396,9 +15424,15 @@ unicode = 64257;
 {
 color = 4;
 glyphname = fl;
-lastChange = "2026-04-14 15:25:22 +0000";
+lastChange = "2026-07-01 12:39:34 +0000";
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+pos = (211,0);
+}
+);
 layerId = m01;
 shapes = (
 {
